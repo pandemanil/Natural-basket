@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Basket - Farm Fresh Goodness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for Premium Feel */
+        :root {
+            --color-primary: #38761d; /* Deep Forest Green */
+            --color-secondary: #fefce8; /* Light Cream */
+            --color-accent: #b45f06; /* Earthy Gold/Brown */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-secondary);
+        }
+        /* Leaf-style card for organic feel */
+        .premium-card {
+            transition: all 0.3s ease-in-out;
+            border-radius: 1.5rem; /* 24px - for soft, natural corners */
+            box-shadow: 0 10px 20px -5px rgba(56, 118, 29, 0.1); /* Subtle green shadow */
+            overflow: hidden;
+        }
+        .premium-card:hover {
+            box-shadow: 0 15px 30px -8px rgba(56, 118, 29, 0.2); 
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #2e6219;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="logo eng.png" alt="Natural Basket Logo" class="h-10 w-10 rounded-full object-cover">
+                <span class="text-3xl font-bold" style="color: var(--color-primary);">
+                    Natural<span class="font-light" style="color: var(--color-accent);"> Basket</span>
+                </span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-gray-700 hover:text-green-700 font-medium transition duration-150">About Us</a>
+                <a href="#vision" class="text-gray-700 hover:text-green-700 font-medium transition duration-150">Our Vision</a>
+                <a href="#products" class="text-gray-700 hover:text-green-700 font-medium transition duration-150">Products</a>
+            </nav>
+
+            <button id="cart-button" class="relative p-2 rounded-full hover:bg-green-50 transition duration-150" aria-label="View Cart">
+                <i data-lucide="shopping-cart" class="w-6 h-6 text-gray-700"></i>
+                <span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="relative h-96 md:h-[500px] flex items-center justify-center overflow-hidden">
+        <img src="head.png" 
+             alt="Vibrant selection of organic produce" 
+             class="absolute inset-0 w-full h-full object-cover opacity-70">
+        <div class="relative z-10 text-center p-6 bg-black/30 rounded-xl max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                Nature's Goodness. <span class="block text-amber-300">Delivered.</span>
+            </h2>
+            <p class="mt-4 text-xl text-gray-100 font-light">
+                Chemical-free produce, fresh milk, and wholesome snacks—straight from the farm to your door.
+            </p>
+            <a href="#products" class="mt-6 inline-block btn-primary px-8 py-3 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl">
+                Explore Products
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="about us.png" alt="Basket of fresh produce" class="rounded-xl shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-6" style="color: var(--color-primary);">About Natural Basket</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Natural Basket is more than just a delivery service; it's a commitment to bringing you the purest,
+                    freshest, and most wholesome natural produce directly from sustainable farms. We believe in
+                    fostering a connection between conscious consumers and dedicated local farmers who practice
+                    chemical-free agriculture.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Every item in your basket is hand-picked, ensuring quality, taste, and nutritional value.
+                    Experience the difference of real food, grown with care and delivered with passion.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="bg-gray-100 py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="vision.png" alt="People cultivating organic farm" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-6" style="color: var(--color-accent);">Our Vision</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        To cultivate a healthier community by making organic, farm-fresh produce accessible to every home.
+                        We envision a future where food is not just nourishment, but a source of well-being,
+                        sustainability, and ethical consumption.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        By empowering local farmers and educating consumers, Natural Basket aims to be the trusted bridge
+                        to a more natural, sustainable, and vibrant food ecosystem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-16 md:py-24 container mx-auto px-4 max-w-7xl">
+        <h2 class="text-4xl font-bold mb-12 text-center" style="color: var(--color-primary);">Our Premium Selection</h2>
+
+        <div id="product-container"></div>
+    </section>
+
+    <section class="bg-gray-100 py-12 md:py-16">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h3 class="text-3xl font-semibold mb-4" style="color: var(--color-accent);">The Natural Basket Promise</h3>
+            <p class="text-lg text-gray-600">
+                We guarantee farm-to-home freshness, transparent sourcing, and 100% chemical-free produce, supporting local natural farmers.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-10">
+        <div class="container mx-auto px-4 max-w-7xl text-center">
+            <p>&copy; 2026 Natural Basket. All rights reserved. Operating in Hyderabad and nearby regions.</p>
+            <p class="mt-2 text-sm">Follow us on Instagram: <a href="https://www.instagram.com/_natural_basket" target="_blank" class="text-amber-300 hover:text-amber-500">_natural_basket</a></p>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg m-4 p-6 relative">
+            
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 transition">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <h3 class="text-3xl font-bold mb-6" style="color: var(--color-primary);">
+                Your <span class="font-light" style="color: var(--color-accent);">Basket</span>
+            </h3>
+
+            <div class="mb-6 space-y-4 p-4 border border-gray-200 rounded-lg">
+                <h4 class="text-xl font-semibold" style="color: var(--color-primary);">Delivery Details</h4>
+                <div>
+                    <label for="customer-name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                    <input type="text" id="customer-name" placeholder="Enter your full name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" required>
+                </div>
+                <div>
+                    <label for="customer-phone" class="block text-sm font-medium text-gray-700 mb-1">Your Phone Number</label>
+                    <input type="tel" id="customer-phone" placeholder="Enter your mobile number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" required>
+                </div>
+                <div>
+                    <label for="delivery-address" class="block text-sm font-medium text-gray-700 mb-1">Delivery Address</label>
+                    <textarea id="delivery-address" rows="3" placeholder="Flat/House No, Street, Landmark, Area" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" required></textarea>
+                </div>
+            </div>
+
+            <div id="cart-items-list" class="max-h-80 overflow-y-auto mb-6 space-y-4">
+                <p id="empty-cart-message" class="text-gray-500 text-center">Your basket is currently empty.</p>
+            </div>
+
+            <div class="space-y-2 mb-4">
+                <div class="flex justify-between items-center border-t pt-4">
+                    <span class="text-xl font-semibold">Total Items:</span>
+                    <span id="cart-total-items" class="text-2xl font-bold" style="color: var(--color-accent);">0</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-bold" style="color: var(--color-primary);">Estimated Total:</span>
+                    <span id="cart-total-cost" class="text-3xl font-extrabold" style="color: var(--color-accent);">₹0</span>
+                </div>
+            </div>
+
+            <button id="checkout-button" class="mt-6 w-full btn-primary px-6 py-3 rounded-lg text-lg font-semibold disabled:opacity-50" disabled>
+                Place Order via WhatsApp
+            </button>
+            <p class="text-sm text-center text-gray-500 mt-2">You will be redirected to WhatsApp to confirm your order details.</p>
+
+            <div id="message-box" class="hidden fixed bottom-4 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg" role="alert">
+                <strong class="font-bold">Success!</strong>
+                <span id="message-text" class="block sm:inline">Product added to basket.</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // --- 1. PRODUCT DATA WITH IMAGE LABELS APPLIED ---
+        const products = [
+            // Milk Products
+            { id: 4, name: "A2 Desi Cow Milk", category: "Milk", price: 75, unit: "per 1 L", image: "A2 MLK.png" },
+            { id: 5, name: "Homemade Curd (Yogurt)", category: "Milk", price: 60, unit: "per 500g", image: "CURD.png" },
+            { id: 13, name: "Pure Desi Cow Ghee", category: "Milk", price: 650, unit: "per 250g", image: "BUFF.png" },
+
+            // Vegetables
+            { id: 1, name: "Farm Tomatoes", category: "Vegetables", price: 65, unit: "per kg", image: "https://images.unsplash.com/photo-1598170044566-a32034e320d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 2, name: "Fresh Carrots", category: "Vegetables", price: 50, unit: "per kg", image: "https://images.unsplash.com/photo-1529177112040-2092285df649?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 14, name: "Red Onions", category: "Vegetables", price: 40, unit: "per kg", image: "https://images.unsplash.com/photo-1587393433434-d021f20387a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 15, name: "Green Chilies (Tapered)", category: "Vegetables", price: 80, unit: "per 250g", image: "https://images.unsplash.com/photo-1623886576200-a544c8c07e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 3, name: "Bell Peppers (Trio)", category: "Vegetables", price: 120, unit: "per 500g", image: "https://images.unsplash.com/photo-1621345941913-b5d1e2e987c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 10, name: "Spinach Bunch (Leafy)", category: "Vegetables", price: 40, unit: "per bunch", image: "https://images.unsplash.com/photo-1542838167-2f3b97b0a3c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+
+            // Oils
+            { id: 16, name: "Cold-Pressed Groundnut Oil", category: "Oils", price: 290, unit: "per 1 L", image: "https://images.unsplash.com/photo-1583002577789-22a7f50a8d62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 17, name: "Organic Sunflower Oil", category: "Oils", price: 220, unit: "per 1 L", image: "https://images.unsplash.com/photo-1600863028308-01186716a445?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+
+            // Snacks
+            { id: 8, name: "Millet Energy Bar", category: "Snacks", price: 50, unit: "per piece", image: "https://images.unsplash.com/photo-1599042502755-d3ec461f3647?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 18, name: "Traditional Murkulu", category: "Snacks", price: 150, unit: "per 200g", image: "https://images.unsplash.com/photo-1563851508688-ce49704259b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 19, name: "Handmade Athrasalu", category: "Snacks", price: 200, unit: "per 150g", image: "https://images.unsplash.com/photo-1579717757973-2e0e017d84b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 9, name: "Handmade Banana Chips", category: "Snacks", price: 90, unit: "per 100g", image: "https://images.unsplash.com/photo-1620703837936-a36746869a83?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 12, name: "Roasted Makhana", category: "Snacks", price: 70, unit: "per 50g", image: "https://images.unsplash.com/photo-1627889151608-f4e9a0f4a3e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+
+            // Spices
+            { id: 6, name: "Organic Turmeric Powder", category: "Spices", price: 180, unit: "per 200g", image: "https://images.unsplash.com/photo-1628189873269-1c9f82d1c69b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 7, name: "Whole Black Pepper", category: "Spices", price: 450, unit: "per 100g", image: "https://images.unsplash.com/photo-1582845811051-ce0a63116972?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+            { id: 11, name: "Cumin Seeds", category: "Spices", price: 90, unit: "per 100g", image: "https://images.unsplash.com/photo-1622359556094-09c0d6f2c3d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+        ];
+
+        // --- 2. STATE MANAGEMENT & CONSTANTS ---
+        let cart = {}; 
+        const WHATSAPP_NUMBER = "919876543210"; 
+
+        // --- 3. DOM ELEMENT REFERENCES ---
+        const productContainer = document.getElementById('product-container');
+        const cartCountElement = document.getElementById('cart-count');
+        const cartModal = document.getElementById('cart-modal');
+        const cartItemsList = document.getElementById('cart-items-list');
+        const checkoutButton = document.getElementById('checkout-button');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const cartTotalItemsElement = document.getElementById('cart-total-items');
+        const cartTotalCostElement = document.getElementById('cart-total-cost'); 
+        const customerNameInput = document.getElementById('customer-name'); 
+        const customerPhoneInput = document.getElementById('customer-phone'); 
+        const deliveryAddressInput = document.getElementById('delivery-address'); 
+        const messageBox = document.getElementById('message-box');
+        const messageText = document.getElementById('message-text');
+
+        // --- 4. UTILITY FUNCTIONS ---
+        function showMessage(text, isError = false) {
+            messageText.textContent = text;
+            messageBox.style.backgroundColor = isError ? '#fef2f2' : '#ecfdf5';
+            messageBox.style.borderColor = isError ? '#fca5a5' : '#a7f3d0';
+            messageBox.style.color = isError ? '#991b1b' : '#065f46';
+            messageBox.classList.remove('hidden');
+            messageBox.classList.add('flex', 'flex-row', 'items-center', 'justify-between', 'gap-2');
+
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 3000);
+        }
+
+        function getCategoryTitle(category) {
+            switch(category) {
+                case 'Milk': return '🥛 Milk Products';
+                case 'Vegetables': return '🥕 Fresh Vegetables & Greens';
+                case 'Oils': return '🏺 Cooking Oils';
+                case 'Snacks': return '🍪 Traditional Snacks';
+                case 'Spices': return '🌶️ Premium Spices';
+                default: return category;
+            }
+        }
+
+        // --- 5. RENDER FUNCTIONS ---
+        function renderProducts() {
+            const categorizedProducts = products.reduce((acc, product) => {
+                if (!acc[product.category]) {
+                    acc[product.category] = [];
+                }
+                acc[product.category].push(product);
+                return acc;
+            }, {});
+
+            const displayOrder = ['Milk', 'Vegetables', 'Oils', 'Snacks', 'Spices'];
+            let productHTML = '';
+
+            displayOrder.forEach(category => {
+                const items = categorizedProducts[category];
+                if (items && items.length > 0) {
+                    const categoryTitle = getCategoryTitle(category);
+
+                    productHTML += `
+                        <h3 class="text-3xl font-bold mt-12 mb-6 pt-4 border-t-2 border-green-200" style="color: var(--color-primary);">
+                            ${categoryTitle}
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    `;
+
+                    productHTML += items.map(product => `
+                        <div class="premium-card bg-white shadow-xl flex flex-col">
+                            <img src="${product.image}" 
+                                 alt="${product.name}" 
+                                 class="w-full h-40 object-cover rounded-t-[1.5rem]"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x200/F0F0F0/666666?text=Image+Unavailable';">
+                            
+                            <div class="p-5 flex flex-col flex-grow">
+                                <span class="text-sm font-medium text-gray-500">${product.category}</span>
+                                <h3 class="text-xl font-semibold mt-1" style="color: var(--color-primary);">${product.name}</h3>
+                                <p class="text-2xl font-bold mt-2 mb-4" style="color: var(--color-accent);">
+                                    ₹${product.price} <span class="text-base font-normal text-gray-500">/${product.unit}</span>
+                                </p>
+                                
+                                <div class="mt-auto">
+                                    <button onclick="addToCart(${product.id})" class="w-full btn-primary px-4 py-3 rounded-full font-medium text-base shadow-md hover:shadow-lg">
+                                        <i data-lucide="plus" class="w-4 h-4 inline-block align-text-bottom mr-1"></i> Add to Basket
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    productHTML += `</div>`; 
+                }
+            });
+
+            productContainer.innerHTML = productHTML;
+            lucide.createIcons();
+        }
+
+        function updateCartDisplay() {
+            let totalItems = 0;
+            let totalCost = 0; 
+            let cartContentHTML = '';
+
+            const cartItems = Object.values(cart);
+
+            if (cartItems.length === 0) {
+                emptyCartMessage.classList.remove('hidden');
+                checkoutButton.disabled = true;
+                checkoutButton.textContent = 'Basket is Empty';
+            } else {
+                emptyCartMessage.classList.add('hidden');
+                checkoutButton.disabled = false;
+                checkoutButton.textContent = 'Place Order via WhatsApp';
+
+                cartItems.forEach(cartItem => {
+                    const item = cartItem.item;
+                    const quantity = cartItem.quantity;
+                    const totalPrice = item.price * quantity;
+                    totalItems += quantity;
+                    totalCost += totalPrice; 
+
+                    cartContentHTML += `
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg shadow-sm">
+                            <div class="flex-grow">
+                                <p class="font-semibold text-lg" style="color: var(--color-primary);">${item.name}</p>
+                                <p class="text-sm text-gray-600">₹${item.price} ${item.unit}</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <button onclick="decreaseQuantity(${item.id})" class="text-gray-500 hover:text-red-600 p-1 rounded-full border border-gray-300">
+                                    <i data-lucide="minus" class="w-4 h-4"></i>
+                                </button>
+                                <span class="font-bold text-xl">${quantity}</span>
+                                <button onclick="increaseQuantity(${item.id})" class="text-gray-500 hover:text-green-600 p-1 rounded-full border border-gray-300">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                            <span class="ml-4 font-bold text-lg w-20 text-right" style="color: var(--color-accent);">₹${totalPrice.toFixed(0)}</span>
+                        </div>
+                    `;
+                });
+            }
+
+            cartItemsList.innerHTML = cartContentHTML;
+            cartCountElement.textContent = totalItems;
+            cartTotalItemsElement.textContent = totalItems;
+            cartTotalCostElement.textContent = `₹${totalCost.toFixed(0)}`; 
+            lucide.createIcons();
+        }
+
+        // --- 6. CART LOGIC FUNCTIONS ---
+        window.addToCart = function(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) {
+                showMessage('Error: Product not found.', true);
+                return;
+            }
+
+            if (cart[productId]) {
+                cart[productId].quantity += 1;
+            } else {
+                cart[productId] = { item: product, quantity: 1 };
+            }
+
+            updateCartDisplay();
+            showMessage(`${product.name} added to basket.`);
+        }
+
+        window.increaseQuantity = function(productId) {
+            if (cart[productId]) {
+                cart[productId].quantity += 1;
+                updateCartDisplay();
+            }
+        }
+
+        window.decreaseQuantity = function(productId) {
+            if (cart[productId]) {
+                cart[productId].quantity -= 1;
+                if (cart[productId].quantity <= 0) {
+                    delete cart[productId]; 
+                }
+                updateCartDisplay();
+            }
+        }
+
+        // --- 7. WHATSAPP CHECKOUT ---
+        function generateWhatsAppMessage(customerName, customerPhone, deliveryAddress) {
+            let message = "Hello Natural Basket team, I would like to place an order:\n\n";
+
+            message += `*Customer Name:* ${customerName}\n`;
+            message += `*Customer Number:* ${customerPhone}\n`;
+            message += `*Delivery Address:* ${deliveryAddress}\n\n\n`;
+
+            message += "*My Order Details:*\n";
+            let totalItems = 0;
+            let totalCost = 0;
+
+            const cartItems = Object.values(cart);
+            if (cartItems.length === 0) return null;
+
+            cartItems.forEach(cartItem => {
+                const item = cartItem.item;
+                const quantity = cartItem.quantity;
+                const itemPrice = item.price * quantity;
+                totalItems += quantity;
+                totalCost += itemPrice;
+
+                message += `\n- ${quantity} x ${item.name} (₹${item.price} / ${item.unit})`;
+            });
+
+            message += `\n\n*Total Items in Basket:* ${totalItems}`;
+            message += `\n*Estimated Total Cost:* ₹${totalCost.toFixed(0)}`;
+            message += `\n\n_Please confirm the final order, delivery time, and payment details. Thank you!_`;
+
+            return message;
+        }
+
+        function handleCheckout() {
+            const customerName = customerNameInput.value.trim();
+            const customerPhone = customerPhoneInput.value.trim();
+            const deliveryAddress = deliveryAddressInput.value.trim();
+
+            if (!customerName || !customerPhone || !deliveryAddress) {
+                showMessage("Please enter your name, number, and delivery address to proceed.", true);
+                return;
+            }
+
+            const message = generateWhatsAppMessage(customerName, customerPhone, deliveryAddress);
+            if (!message) {
+                showMessage("Your basket is empty. Please add products before checking out.", true);
+                return;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+
+            cart = {};
+            customerNameInput.value = ''; 
+            customerPhoneInput.value = '';
+            deliveryAddressInput.value = '';
+            updateCartDisplay();
+            cartModal.classList.add('hidden');
+            cartModal.classList.remove('flex');
+            showMessage("Order initiated! Please complete your purchase on WhatsApp.");
+        }
+
+        // --- 8. INITIALIZATION & EVENT LISTENERS ---
+        document.getElementById('cart-button').addEventListener('click', () => {
+            updateCartDisplay();
+            cartModal.classList.remove('hidden');
+            cartModal.classList.add('flex');
+        });
+
+        document.getElementById('close-modal-btn').addEventListener('click', () => {
+            cartModal.classList.add('hidden');
+            cartModal.classList.remove('flex');
+        });
+
+        cartModal.addEventListener('click', (e) => {
+            if (e.target === cartModal) {
+                cartModal.classList.add('hidden');
+                cartModal.classList.remove('flex');
+            }
+        });
+
+        checkoutButton.addEventListener('click', handleCheckout);
+
+        window.onload = function() {
+            renderProducts();
+            updateCartDisplay();
+            lucide.createIcons(); 
+        };
+    </script>
+</body>
+</html>
